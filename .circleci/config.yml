@@ -4,9 +4,9 @@ image_config: &image_config
   # either as project-specific environment variables
   # or as resources in your organization's org-global Context
 
-  IMAGE_NAME: node-yarn-ts-gcloud
+  IMAGE_NAME: ft-docker-ci
 
-  IMAGE_TAG: node-yarn-ts-gcloud-docker
+  IMAGE_TAG: ft-docker-ci
 
   # NOTE: if you're modifying this config.yml file manually
   # rather than using the included setup script,
@@ -15,7 +15,21 @@ image_config: &image_config
 
   LINUX_VERSION: DEBIAN_STRETCH
 
+  # RUBY_VERSION_NUM: # pick a version from https://cache.ruby-lang.org/pub/ruby
+
   NODE_VERSION_NUM: 17
+
+  # PYTHON_VERSION_NUM: # pick a version from https://python.org/ftp/python
+
+  JAVA: false
+
+  MYSQL_CLIENT: false
+
+  POSTGRES_CLIENT: false
+
+  DOCKERIZE: false
+
+  BROWSERS: false
 
 version: 2
 jobs:
@@ -40,7 +54,7 @@ jobs:
 
   test_image:
     docker:
-      - image: $DOCKER_USERNAME/node-yarn-ts-gcloud:node-yarn-ts-gcloud-docker
+      - image: $DOCKER_USERNAME/ft-docker-ci:ft-docker-ci
         environment:
           <<: *image_config
 
