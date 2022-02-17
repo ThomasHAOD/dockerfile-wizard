@@ -16,7 +16,6 @@ Easily build Docker images with different versions/combinations of common langua
 
 **2. Add your Docker Hub username (`DOCKER_USERNAME`) and password (`DOCKER_PASSWORD`) to CircleCI, either as project-specific environment variables (shown below), or as resources in your **org-global** (default) [Context](https://circleci.com/docs/2.0/contexts)**
 
-
 ![Environment Variables](https://raw.githubusercontent.com/CircleCI-Public/dockerfile-wizard/master/img/env%20vars.jpg "Environment Variables")
 
 **3.** Clone your fork of the project onto your computer
